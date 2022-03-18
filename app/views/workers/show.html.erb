@@ -1,2 +1,7 @@
 <h1>worker#show</h1>
 <%= link_to 'SignOut', destroy_worker_session_path, method: :delete %>
+<%= link_to '出勤', logs_path, method: :post %>
+
+<% @logs.each do |log| %>
+	<%= log.created_at %>
+<% end %>

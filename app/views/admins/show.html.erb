@@ -3,5 +3,5 @@
 <%= link_to 'SignOut', destroy_admin_session_path, method: :delete %>
 
 <% @workers.each do |worker| %>
-	<p><%= worker.email %> </p>
-	<% end %>
+	<p><%= link_to worker.email, worker_path(worker.id) %> </p>
+<% end %>
