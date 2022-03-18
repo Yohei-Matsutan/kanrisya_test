@@ -1,0 +1,7 @@
+<h1>Admins#show</h1>
+<p>Find me in app/views/admins/show.html.erb</p>
+<%= link_to 'SignOut', destroy_admin_session_path, method: :delete %>
+
+<% @workers.each do |worker| %>
+	<p><%= worker.email %> </p>
+	<% end %>
